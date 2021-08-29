@@ -26,7 +26,7 @@ namespace LibraryApp
             new DVD{Id=12, Name="Super8", Author="JJ Abrams", Description="Kid Monster movie" },
             new DVD{Id=12, Name="Fury", Author="David Ayer", Description="WW2 movie" },
             new DVD{Id=13, Name="300", Author="Zack Snyder", Description="Spartan movie" },
-            new DVD{Id=14, Name="Little Women", Author="Greta Gerwig", Description="Drama movie" };
+            new DVD{Id=14, Name="Little Women", Author="Greta Gerwig", Description="Drama movie" }
     };
     public void IssueLibraryItemToMember(Member member, LibraryItem libraryItem)
     {
@@ -46,7 +46,7 @@ namespace LibraryApp
                 Console.WriteLine($"You already have 5 items checked out");
             }
         }
-        public LibraryItem GetLibraryItem(int id)
+        LibraryItem GetLibraryItem(int id)
         {
             LibraryItem libraryItem = null;
             bool found = false;
@@ -72,7 +72,7 @@ namespace LibraryApp
             }
             return libraryItem;
         }
-        public void ReturnLibraryItem(Member member, int id)
+        void ReturnLibraryItem(Member member, int id)
         {
             bool issued = false;
             for (int i = 0; i < member.BorrowedLibraryItems.Length; i++)
@@ -92,7 +92,7 @@ namespace LibraryApp
                 Console.WriteLine("Could not find the item to return. Please try again");
             }
         }
-        public eBook[] ListAllAvailableeBooks()
+        eBook[] ListAllAvailableeBooks()
         {
             Console.WriteLine("All available eBooks");
             foreach (LibraryItem item in alleBooks)
@@ -101,7 +101,7 @@ namespace LibraryApp
             }
             return alleBooks;
         }
-        public eBook[] ListAllAvailableDVDs()
+        eBook[] ListAllAvailableDVDs()
         {
             Console.WriteLine("All Available DVDs.");
             foreach(LibraryItem item in allDVDs)

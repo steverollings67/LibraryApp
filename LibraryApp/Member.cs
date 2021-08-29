@@ -10,12 +10,12 @@ namespace LibraryApp
     {
         public Member()
         {
-            BorrowedLibraryItems = new LibraryItem[5]
+            BorrowedLibraryItems = new LibraryItem[5];
         }
-        public int MemberID { get; set; };
-        public string Name { get; set; };
-        public string Email { get; set; };
-        public LibraryItem[] BorrowedLibraryItems { get; set; };
+        public int MemberID { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public LibraryItem[] BorrowedLibraryItems { get; set; }
         public ViewMyBorrowedLibrayItems()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -33,7 +33,7 @@ namespace LibraryApp
                 }
             }
         }
-        Console.Foreground = ConsoleColor.White;
+        Console.Foreground(ConsoleColor.White);
 
         pulic void PlaybyId(int Id)
         {
